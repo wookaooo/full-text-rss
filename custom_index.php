@@ -121,54 +121,7 @@ if (!defined('_FF_FTR_INDEX')) {
 	</div>
 	</div>
     
-  <!--  没啥用，隐藏了
-    
-	<div class="control-group">
-	<label class="control-label" for="links">是否保留原文内链接</label>
-	<div class="controls">
-	<select name="links" id="links" class="input-medium" title="Link handling" data-content="By default, links within the content are preserved. Change this field if you'd like links removed, or included as footnotes.">
-		<option value="preserve" selected="selected">preserve</option>
-		<option value="footnotes">add to footnotes</option>
-		<option value="remove">remove</option>
-	</select>
-	</div>
-	</div>
-	<?php if ($options->exclude_items_on_fail == 'user') { ?>
-	<div class="control-group">
-	<label class="control-label" for="exc">If extraction fails</label>
-	<div class="controls">
-	<select name="exc" id="exc" title="Item handling when extraction fails" data-content="If extraction fails, we can remove the item from the feed or keep it in.<br /><br />Keeping the item will keep the title, URL and original description (if any) found in the feed. In addition, we insert a message before the original description notifying you that extraction failed.">
-		<option value="" selected="selected">keep item in feed</option>
-		<option value="1">remove item from feed</option>
-	</select>
-	</div>
-	</div>
-	<?php } ?>
-	
-	<?php if ($options->summary == 'user') { ?>
-	<div class="control-group">
-	<label class="control-label" for="summary">Include excerpt</label>
-	<div class="controls">
-	<input type="checkbox" name="summary" value="1" id="summary" style="margin-top: 7px;" />
-	</div>
-	</div>
-	<?php } ?>
 
-	<div class="control-group" style="margin-top: -15px;">
-	<label class="control-label" for="json">JSON output</label>
-	<div class="controls">
-	<input type="checkbox" name="format" value="json" id="json" style="margin-top: 7px;" />
-	</div>
-	</div>
-	
-	<div class="control-group" style="margin-top: -15px;">
-	<label class="control-label" for="debug">Debug</label>
-	<div class="controls">
-	<input type="checkbox" name="debug" value="1" id="debug" style="margin-top: 7px;" />
-	</div>
-	</div>	
-	
-  -->
 
 	</fieldset>
 	<div class="form-actions" style="background-color: transparent; border-color: transparent; margin-top: 0px; "  >
@@ -178,9 +131,9 @@ border-color: #1B9AF7; border-radius: 4px;" line-height: 50px; padding: 0 50px; 
 	</form>
 	
 	<p style="color: #08c; text-decoration: none; text-align: center; margin: 0 0 9px; " >
-    代码：<a href="http://fivefilters.org">FiveFilters.org</a>
-    托管：<a href="https://dashboard.heroku.com/">heroku</a>
-    CDN：<a href="https://dash.cloudflare.com/">cloudflare</a>
+    代码<a href="http://fivefilters.org">fivefilters</a>
+    托管<a href="https://dashboard.heroku.com/">heroku</a>
+    CDN<a href="https://dash.cloudflare.com/">cloudflare</a>
 	</p>
     
 	</div>
