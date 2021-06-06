@@ -80,24 +80,19 @@ if (!defined('_FF_FTR_INDEX')) {
   </head>
   <body>
 	<div class="container" style="width: 800px; padding-bottom: 60px;">
-	<h1 style="padding-top: 5px;">Full-Text RSS <?php echo _FF_FTR_VERSION; ?> <span style="font-size: .7em; font-weight: normal;">&mdash; from <a href="http://fivefilters.org">FiveFilters.org</a></span></h1>
+	<h1 style="padding-top: 12px;text-align: center;">外网&全文RSS获取</h1>
     <form method="get" action="makefulltextfeed.php" id="form" class="form-horizontal">
 	<fieldset>
-		<legend>Create full-text feed from feed or webpage URL</legend>
+		<legend>从feed或者网页URL,创建全文feed</legend>
 		<div class="control-group">
 			<label class="control-label" for="url">Enter URL</label>
-			<div class="controls"><input type="text" id="url" name="url" style="width: 450px;" title="URL" data-content="Typically this is a URL for a partial feed which we transform into a full-text feed. But it can also be a standard web page URL, in which case we'll extract its content and return it in a 1-item feed." /></div>
+			<div class="controls"><input type="text" id="url" name="url" style="width: 450px;" title="URL" data-content="输入feed链接或者网址，生成全文feed。" /></div>
 		</div>
 	</fieldset>
+	    
 	<fieldset>
 	<legend>Options</legend>
 	<?php if (isset($options->api_keys) && !empty($options->api_keys)) { ?>
-	<div class="control-group">
-	<label class="control-label" for="key">Access key</label>
-	<div class="controls">
-	<input type="text" id="key" name="key" class="input-medium" <?php if ($options->key_required) echo 'required'; ?> title="Access Key" data-content="<?php echo ($options->key_required) ? 'An access key is required to generate a feed' : 'If you have an access key, enter it here.'; ?>" />
-	</div>
-	</div>
 	<?php } ?>
 	<div class="control-group">
 	<label class="control-label" for="max">Max items</label>
@@ -120,26 +115,8 @@ if (!defined('_FF_FTR_INDEX')) {
 	<span class="help-inline" style="color: #888;"><?php echo $msg; ?></span>
 	</div>
 	</div>
-	<div class="control-group">
-	<label class="control-label" for="links">Links</label>
-	<div class="controls">
-	<select name="links" id="links" class="input-medium" title="Link handling" data-content="By default, links within the content are preserved. Change this field if you'd like links removed, or included as footnotes.">
-		<option value="preserve" selected="selected">preserve</option>
-		<option value="footnotes">add to footnotes</option>
-		<option value="remove">remove</option>
-	</select>
-	</div>
-	</div>
+	
 	<?php if ($options->exclude_items_on_fail == 'user') { ?>
-	<div class="control-group">
-	<label class="control-label" for="exc">If extraction fails</label>
-	<div class="controls">
-	<select name="exc" id="exc" title="Item handling when extraction fails" data-content="If extraction fails, we can remove the item from the feed or keep it in.<br /><br />Keeping the item will keep the title, URL and original description (if any) found in the feed. In addition, we insert a message before the original description notifying you that extraction failed.">
-		<option value="" selected="selected">keep item in feed</option>
-		<option value="1">remove item from feed</option>
-	</select>
-	</div>
-	</div>
 	<?php } ?>
 	
 	<?php if ($options->summary == 'user') { ?>
@@ -151,19 +128,9 @@ if (!defined('_FF_FTR_INDEX')) {
 	</div>
 	<?php } ?>
 
-	<div class="control-group" style="margin-top: -15px;">
-	<label class="control-label" for="json">JSON output</label>
-	<div class="controls">
-	<input type="checkbox" name="format" value="json" id="json" style="margin-top: 7px;" />
-	</div>
-	</div>
+
 	
-	<div class="control-group" style="margin-top: -15px;">
-	<label class="control-label" for="debug">Debug</label>
-	<div class="controls">
-	<input type="checkbox" name="debug" value="1" id="debug" style="margin-top: 7px;" />
-	</div>
-	</div>	
+	
 	
 	</fieldset>
 	<div class="form-actions">
@@ -174,9 +141,9 @@ if (!defined('_FF_FTR_INDEX')) {
 	
 	
 		<p style="font-size: 13px; color: #08c; text-decoration: none; text-align: center; margin: 0 0 9px; " >
-    代码<a href="http://fivefilters.org">fivefilters</a>
-    托管<a href="https://dashboard.heroku.com/">heroku</a>
-    CDN<a href="https://dash.cloudflare.com/">cloudflare</a>
+    代码-<a href="http://fivefilters.org">fivefilters</a>
+    丨托管-<a href="https://dashboard.heroku.com/">heroku</a>
+    丨CDN-<a href="https://dash.cloudflare.com/">cloudflare</a>
 	</p>
 	</div>
   </body>
