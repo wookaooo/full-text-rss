@@ -83,6 +83,102 @@ if (!defined('_FF_FTR_INDEX')) {
 	
 	
   <body>
+	  
+	  <div class="container" style="width: 800px; padding-bottom: 60px;">
+	<h1 style="padding-top: 5px;">Full-Text RSS <?php echo _FF_FTR_VERSION; ?> <span style="font-size: .7em; font-weight: normal;">&mdash; from <a href="http://fivefilters.org">FiveFilters.org</a></span></h1>
+    <form method="get" action="makefulltextfeed.php" id="form" class="form-horizontal">
+	<fieldset>
+		<legend>Create full-text feed from feed or webpage URL</legend>
+		<div class="control-group">
+			<label class="control-label" for="url">Enter URL</label>
+			<div class="controls"><input type="text" id="url" name="url" style="width: 450px;" title="URL" data-content="Typically this is a URL for a partial feed which we transform into a full-text feed. But it can also be a standard web page URL, in which case we'll extract its content and return it in a 1-item feed." /></div>
+		</div>
+	</fieldset>
+	<fieldset>
+	<legend>Options</legend>
+	<?php if (isset($options->api_keys) && !empty($options->api_keys)) { ?>
+	<div class="control-group">
+	<label class="control-label" for="key">Access key</label>
+	<div class="controls">
+	<input type="text" id="key" name="key" class="input-medium" <?php if ($options->key_required) echo 'required'; ?> title="Access Key" data-content="<?php echo ($options->key_required) ? 'An access key is required to generate a feed' : 'If you have an access key, enter it here.'; ?>" />
+	</div>
+	</div>
+	<?php } ?>
+	<div class="control-group">
+	<label class="control-label" for="max">Max items</label>
+	<div class="controls">
+	<?php
+	// echo '<select name="max" id="max" class="input-medium">'
+	// for ($i = 1; $i <= $options->max_entries; $i++) {
+	//	printf("<option value=\"%s\"%s>%s</option>\n", $i, ($i==$options->default_entries) ? ' selected="selected"' : '', $i);
+	// } 
+	// echo '</select>';
+	if (!empty($options->api_keys)) {
+		$msg = 'Limit: '.$options->max_entries.' (with key: '.$options->max_entries_with_key.')';
+		$msg_more = 'If you need more items, change <tt>max_entries</tt> (and <tt>max_entries_with_key</tt>) in config.';
+	} else {
+		$msg = 'Limit: '.$options->max_entries;
+		$msg_more = 'If you need more items, change <tt>max_entries</tt> in config.';
+	}
+	?>	
+	<input type="text" name="max" id="max" class="input-mini" value="<?php echo $options->default_entries; ?>" title="Feed item limit" data-content="Set the maximum number of feed items we should process. The smaller the number, the faster the new feed is produced.<br /><br />If your URL refers to a standard web page, this will have no effect: you will only get 1 item.<br /><br /> <?php echo $msg_more; ?>" />
+	<span class="help-inline" style="color: #888;"><?php echo $msg; ?></span>
+	</div>
+	</div>
+	<div class="control-group">
+	<label class="control-label" for="links">Links</label>
+	<div class="controls">
+	<select name="links" id="links" class="input-medium" title="Link handling" data-content="By default, links within the content are preserved. Change this field if you'd like links removed, or included as footnotes.">
+		<option value="preserve" selected="selected">preserve</option>
+		<option value="footnotes">add to footnotes</option>
+		<option value="remove">remove</option>
+	</select>
+	</div>
+	</div>
+	<?php if ($options->exclude_items_on_fail == 'user') { ?>
+	<div class="control-group">
+	<label class="control-label" for="exc">If extraction fails</label>
+	<div class="controls">
+	<select name="exc" id="exc" title="Item handling when extraction fails" data-content="If extraction fails, we can remove the item from the feed or keep it in.<br /><br />Keeping the item will keep the title, URL and original description (if any) found in the feed. In addition, we insert a message before the original description notifying you that extraction failed.">
+		<option value="" selected="selected">keep item in feed</option>
+		<option value="1">remove item from feed</option>
+	</select>
+	</div>
+	</div>
+	<?php } ?>
+	
+	<?php if ($options->summary == 'user') { ?>
+	<div class="control-group">
+	<label class="control-label" for="summary">Include excerpt</label>
+	<div class="controls">
+	<input type="checkbox" name="summary" value="1" id="summary" style="margin-top: 7px;" />
+	</div>
+	</div>
+	<?php } ?>
+
+	<div class="control-group" style="margin-top: -15px;">
+	<label class="control-label" for="json">JSON output</label>
+	<div class="controls">
+	<input type="checkbox" name="format" value="json" id="json" style="margin-top: 7px;" />
+	</div>
+	</div>
+	
+	<div class="control-group" style="margin-top: -15px;">
+	<label class="control-label" for="debug">Debug</label>
+	<div class="controls">
+	<input type="checkbox" name="debug" value="1" id="debug" style="margin-top: 7px;" />
+	</div>
+	</div>	
+	
+	</fieldset>
+	<div class="form-actions">
+		<input type="submit" id="sudbmit" name="submit" value="Create Feed" class="btn btn-primary" />
+	</div>
+	</form>
+	  
+	  
+	  
+	  
 	<div class="container" style="width: 800px; padding-bottom: 30px;">
 	<h1 style="padding-top: 180px;text-align: center;">RSS Feed 全文输出</h1>
 	<h2>从外网feed或者网页URL,创建全文feed</h2>
