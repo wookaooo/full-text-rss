@@ -85,10 +85,12 @@ if (!defined('_FF_FTR_INDEX')) {
   <body>
 	<div class="container" style="width: 800px; padding-bottom: 30px;">
 	<h1 style="padding-top: 180px;text-align: center;">全文RSS获取</h1>
+	<h2 style="text-align: center; >从外网feed或者网页URL,创建全文feed</h2>
     <div method="get" action="makefulltextfeed.php" id="form" class="form-horizontal">
-	<h2 style="text-align: center; padding-bottom: 10px;>从外网feed或者网页URL,创建全文feed</h2>
     <div class="control-group">
 		<label class="control-label" for="url">输入feed链接或者网址</label>
+		<div class="controls"><input type="text" id="url" name="url" style="width: 450px;"  /></div>
+		</div>
 	</div>
 	    
 	<?php if (isset($options->api_keys) && !empty($options->api_keys)) { ?>
@@ -107,7 +109,6 @@ if (!defined('_FF_FTR_INDEX')) {
 		$msg_more = 'If you need more items, change <tt>max_entries</tt> in config.';
 	}
 	?>	
-	<span class="help-inline" style="color: #888;"><?php echo $msg; ?></span>
 	<?php if ($options->exclude_items_on_fail == 'user') { ?><?php } ?>
 	<?php if ($options->summary == 'user') { ?><?php } ?>
 
