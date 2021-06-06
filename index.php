@@ -124,6 +124,35 @@ border-color: #1B9AF7; border-radius: 4px;" line-height: 50px; padding: 0 50px; 
     丨托管 <a href="https://dashboard.heroku.com/">heroku</a>
     丨CDN <a href="https://dash.cloudflare.com/">cloudflare</a>
 	</p>
+		
+		
+		<div id="wp">
+<div id="ua" ss_c="xin81"></div>
+<h1>
+<img src="/soso/images/logo_index_soso.png?v=2" width="280" height="49" alt="召唤师-全文RSS生成" title="召唤">
+</h1>
+<div id="sc" class="control-group" >
+	<div id="s" class="controls" >
+	<form id="url" name="url" class="controls" >
+		<input type="hidden" value="utf8" name="ie" />
+		<input type="hidden" value="s.idx" id="pid" name="pid" />
+		<input type="text" placeholder="输入被屏蔽的feed或网址.." value="" id="query" name="query" class="form-actions"  />
+        <input type="submit" id="sudbmit" name="submit" value="Creat Feed" class="btn btn-primary"  />
+	</form>
+	</div>
+</div>
+</div>
+<div id="ft">
+	<p style="font-size: 13px; color: #08c; text-decoration: none; text-align: center; margin: 0 0 9px; line-height: 24px;
+text-align: center;padding: 0;
+margin: 0;" >
+    代码 <a href="http://fivefilters.org">fivefilters</a>
+    丨托管 <a href="https://dashboard.heroku.com/">heroku</a>
+    丨CDN <a href="https://dash.cloudflare.com/">cloudflare</a>
+	</p>
+</div>
+
+
 
 	</div>
   </body>
