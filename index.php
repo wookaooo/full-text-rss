@@ -78,20 +78,22 @@ if (!defined('_FF_FTR_INDEX')) {
 
 	</style>
   </head>
+	
+	
+	
   <body>
-	<div class="container" style="width: 800px; padding-bottom: 300px;">
-	<h1 style="padding-top: 12px;text-align: center;">全文RSS获取</h1>
-    <form method="get" action="makefulltextfeed.php" id="form" class="form-horizontal">
-	<fieldset>
+	<div class="container" style="width: 800px; padding-bottom: 30px;">
+	<h1 style="padding-top: 180px;text-align: center;">全文RSS获取</h1>
+    <div method="get" action="makefulltextfeed.php" id="form" class="form-horizontal">
+	<div>
 		<legend>从外网feed或者网页URL,创建全文feed</legend>
 		<div class="control-group">
 			<label class="control-label" for="url">Enter URL</label>
 			<div class="controls"><input type="text" id="url" name="url" style="width: 450px;" title="URL" data-content="输入feed链接或者网址，生成全文feed。" /></div>
 		</div>
-	</fieldset>
+	</div>
 	    
-	<fieldset>
-	<legend>Options</legend>
+	<div>
 	<?php if (isset($options->api_keys) && !empty($options->api_keys)) { ?>
 	<?php } ?>
 	<div class="control-group">
@@ -128,13 +130,13 @@ if (!defined('_FF_FTR_INDEX')) {
 	
 	
 	
-	</fieldset>
+	</div>
 	<div class="form-actions" style="background-color: transparent; border-color: transparent; margin-top: 0px; "  >
 		<input type="submit" id="sudbmit" name="submit" value="Create Feed" class="btn btn-primary" style="background-color: #1B9AF7;
 border-color: #1B9AF7; border-radius: 4px;" line-height: 50px; padding: 0 50px; font-size: 16px; />
 	</div>
-	</form>
-	
+
+	</div>
 	
 	
 		<p style="font-size: 13px; color: #08c; text-decoration: none; text-align: center; margin: 0 0 9px; " >
