@@ -85,14 +85,19 @@ if (!defined('_FF_FTR_INDEX')) {
   <body>
 	<div class="container" style="width: 800px; padding-bottom: 30px;">
 	<h1 style="padding-top: 180px;text-align: center;">全文RSS获取</h1>
-	<h2 style="text-align: center; >从外网feed或者网页URL,创建全文feed</h2>
+	<h2>从外网feed或者网页URL,创建全文feed</h2>
     <div method="get" action="makefulltextfeed.php" id="form" class="form-horizontal">
     <div class="control-group">
-		<label class="control-label" for="url">输入feed链接或者网址</label>
+		<label class="control-label" for="url">输入feed链接或者网址：</label>
 		<div class="controls"><input type="text" id="url" name="url" style="width: 450px;"  /></div>
 		</div>
 	</div>
 	    
+		<div class="form-actions" style="background-color: transparent; border-color: transparent; margin-top: 0px; "  >
+		<input type="submit" id="sudbmit" name="submit" value="Create Feed" class="btn btn-primary" style="background-color: #1B9AF7;
+border-color: #1B9AF7; border-radius: 4px;" line-height: 50px; padding: 0 50px; font-size: 16px; />
+	</div>	
+		
 	<?php if (isset($options->api_keys) && !empty($options->api_keys)) { ?>
 	<?php } ?>
 	<?php
@@ -113,11 +118,6 @@ if (!defined('_FF_FTR_INDEX')) {
 	<?php if ($options->summary == 'user') { ?><?php } ?>
 
 	
-	</div>
-	<div class="form-actions" style="background-color: transparent; border-color: transparent; margin-top: 0px; "  >
-		<input type="submit" id="sudbmit" name="submit" value="Create Feed" class="btn btn-primary" style="background-color: #1B9AF7;
-border-color: #1B9AF7; border-radius: 4px;" line-height: 50px; padding: 0 50px; font-size: 16px; />
-	</div>
 
 	<p style="font-size: 13px; color: #08c; text-decoration: none; text-align: center; margin: 0 0 9px; " >
     代码 <a href="http://fivefilters.org">fivefilters</a>
