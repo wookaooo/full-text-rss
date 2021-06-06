@@ -85,7 +85,7 @@ if (!defined('_FF_FTR_INDEX')) {
   <body>
 	  
 	  <div class="container" style="width: 800px; padding-bottom: 60px;">
-	<h1 style="padding-top: 5px;">RSS Feed 全文输出 </h1>
+	<h1 style="style="padding-top: 180px;text-align: center;">RSS Feed 全文输出 </h1>
     <form method="get" action="makefulltextfeed.php" id="form" class="form-horizontal">
 	<fieldset>
 		<legend>Create full-text feed from feed or webpage URL</legend>
@@ -101,63 +101,22 @@ if (!defined('_FF_FTR_INDEX')) {
 	</form>
 	  
 	  
-	  
-	  
-	<div class="container" style="width: 800px; padding-bottom: 30px;">
-	<h1 style="padding-top: 180px;text-align: center;">RSS Feed 全文输出</h1>
-	<h2>从外网feed或者网页URL,创建全文feed</h2>
-    <div method="get" action="makefulltextfeed.php" id="form" class="form-horizontal">
-    <div class="control-group">
-		<label class="control-label" for="url">输入feed链接或者网址：</label>
-		<div class="controls"><input type="text" id="url" name="url" style="width: 450px;"  /></div>
-		</div>
-	</div>
-	    
-		<div class="form-actions" style="background-color: transparent; border-color: transparent; margin-top: 0px; "  >
-		<input type="submit" id="sudbmit" name="submit" value="Create Feed" class="btn btn-primary" style="background-color: #1B9AF7;
-border-color: #1B9AF7; border-radius: 4px;" line-height: 50px; padding: 0 50px; font-size: 16px; />
-	</div>	
-		
-	<?php if (isset($options->api_keys) && !empty($options->api_keys)) { ?>
-	<?php } ?>
-	<?php
-	// echo '<select name="max" id="max" class="input-medium">'
-	// for ($i = 1; $i <= $options->max_entries; $i++) {
-	//	printf("<option value=\"%s\"%s>%s</option>\n", $i, ($i==$options->default_entries) ? ' selected="selected"' : '', $i);
-	// } 
-	// echo '</select>';
-	if (!empty($options->api_keys)) {
-		$msg = 'Limit: '.$options->max_entries.' (with key: '.$options->max_entries_with_key.')';
-		$msg_more = 'If you need more items, change <tt>max_entries</tt> (and <tt>max_entries_with_key</tt>) in config.';
-	} else {
-		$msg = 'Limit: '.$options->max_entries;
-		$msg_more = 'If you need more items, change <tt>max_entries</tt> in config.';
-	}
-	?>	
-	<?php if ($options->exclude_items_on_fail == 'user') { ?><?php } ?>
-	<?php if ($options->summary == 'user') { ?><?php } ?>
 
-	
-
-	<p style="font-size: 13px; color: #08c; text-decoration: none; text-align: center; margin: 0 0 9px; " >
-    代码 <a href="http://fivefilters.org">fivefilters</a>
-    丨托管 <a href="https://dashboard.heroku.com/">heroku</a>
-    丨CDN <a href="https://dash.cloudflare.com/">cloudflare</a>
-	</p>
 		
 		
-		<div id="wp">
-<div id="ua" ss_c="xin81"></div>
+<div id="wp">
 <h1>
-<img src="/soso/images/logo_index_soso.png?v=2" width="280" height="49" alt="召唤师-全文RSS生成" title="召唤">
+<img src="/images/logo.png" width="280" height="49" alt="RSS Feed 全文输出" title="召唤师">
 </h1>
-<div id="sc" class="control-group" >
-	<div id="s" class="controls" >
-	<form id="url" name="url" class="controls" >
-		<input type="hidden" value="utf8" name="ie" />
-		<input type="hidden" value="s.idx" id="pid" name="pid" />
-		<input type="text" placeholder="输入被屏蔽的feed或网址.." value="" id="query" name="query" class="form-actions"  />
-        <input type="submit" id="sudbmit" name="submit" value="Creat Feed" class="btn btn-primary"  />
+<div method="get" action="makefulltextfeed.php" id="form" class="form-horizontal" >
+	<div id="s" class="control-group" >
+	<form class="control-label" for="url" >
+		<div class="controls" >
+		   <input type="text" placeholder="输入被屏蔽的feed或网址.." value="" id="url" name="url"   />
+		</div>
+	<div class="form-actions">
+                <input type="submit" id="sudbmit" name="submit" value="Creat Feed" class="btn btn-primary"  />
+	</div>
 	</form>
 	</div>
 </div>
@@ -173,6 +132,36 @@ margin: 0;" >
 </div>
 
 
+
+
+	<!-- 隐藏
+	  
+	<div class="container" style="width: 800px; padding-bottom: 30px;">
+	<h1 style="padding-top: 180px;text-align: center;">RSS Feed 全文输出</h1>
+	<h2>从外网feed或者网页URL,创建全文feed</h2>
+    <div method="get" action="makefulltextfeed.php" id="form" class="form-horizontal">
+    <div class="control-group">
+		<label class="control-label" for="url">输入feed链接或者网址：</label>
+		<div class="controls"><input type="text" id="url" name="url" style="width: 450px;"  /></div>
+		</div>
+	</div>
+		<div class="form-actions" style="background-color: transparent; border-color: transparent; margin-top: 0px; "  >
+		<input type="submit" id="sudbmit" name="submit" value="Create Feed" class="btn btn-primary" style="background-color: #1B9AF7;
+border-color: #1B9AF7; border-radius: 4px;" line-height: 50px; padding: 0 50px; font-size: 16px; />
+	</div>	
+		
+
+	<p style="font-size: 13px; color: #08c; text-decoration: none; text-align: center; margin: 0 0 9px; " >
+    代码 <a href="http://fivefilters.org">fivefilters</a>
+    丨托管 <a href="https://dashboard.heroku.com/">heroku</a>
+    丨CDN <a href="https://dash.cloudflare.com/">cloudflare</a>
+	</p>
+		
+		
+	
+	
+	-->	
+		
 
 	</div>
   </body>
