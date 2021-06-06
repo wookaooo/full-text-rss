@@ -130,7 +130,7 @@ border-color: #1B9AF7; border-radius: 4px;" line-height: 50px; padding: 0 50px; 
 	</div>
 	</form>
 	
-	<p style="color: #08c; text-decoration: none; text-align: center; margin: 0 0 9px; " >
+	<p style="font-size: 13px; color: #08c; text-decoration: none; text-align: center; margin: 0 0 9px; " >
     代码<a href="http://fivefilters.org">fivefilters</a>
     托管<a href="https://dashboard.heroku.com/">heroku</a>
     CDN<a href="https://dash.cloudflare.com/">cloudflare</a>
