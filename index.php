@@ -39,6 +39,7 @@ if (!defined('_FF_FTR_INDEX')) {
 	});
 	</script>
 	<style>
+	html {width: 100%; height: 100%; }	
 	html, body { background: linear-gradient(180deg, #edf7fe 0%, white 95%, white 100%); }
 	body { margin: 0; line-height: 1.4em; font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; }
 	label, input, select, textarea { font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; }
@@ -85,7 +86,7 @@ if (!defined('_FF_FTR_INDEX')) {
 	<div class="container" style="width: 800px; padding-bottom: 30px;">
 	<h1 style="padding-top: 180px;text-align: center;">全文RSS获取</h1>
     <div method="get" action="makefulltextfeed.php" id="form" class="form-horizontal">
-	<div>
+	<div style="text-align: center; padding-bottom: 10px;>
 		<legend>从外网feed或者网页URL,创建全文feed</legend>
 		<div class="control-group">
 			<label class="control-label" for="url">Enter URL</label>
@@ -140,9 +141,9 @@ border-color: #1B9AF7; border-radius: 4px;" line-height: 50px; padding: 0 50px; 
 	
 	
 		<p style="font-size: 13px; color: #08c; text-decoration: none; text-align: center; margin: 0 0 9px; " >
-    代码-<a href="http://fivefilters.org">fivefilters</a>
-    丨托管-<a href="https://dashboard.heroku.com/">heroku</a>
-    丨CDN-<a href="https://dash.cloudflare.com/">cloudflare</a>
+    代码 <a href="http://fivefilters.org">fivefilters</a>
+    丨托管 <a href="https://dashboard.heroku.com/">heroku</a>
+    丨CDN <a href="https://dash.cloudflare.com/">cloudflare</a>
 	</p>
 	</div>
   </body>
