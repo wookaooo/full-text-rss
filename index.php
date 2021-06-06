@@ -11,7 +11,7 @@ if (!defined('_FF_FTR_INDEX')) {
 ?><!DOCTYPE html>
 <html>
   <head>
-    <title>Full-Text RSS Feeds | from fivefilters.org</title>
+    <title>Full-Text RSS Feeds Proxy</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />	
 	<meta name="robots" content="noindex, follow" />
 	<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" media="screen" />
@@ -84,7 +84,7 @@ if (!defined('_FF_FTR_INDEX')) {
 	
   <body>
 	<div class="container" style="width: 800px; padding-bottom: 30px;">
-	<h1 style="padding-top: 180px;text-align: center;">全文RSS获取</h1>
+	<h1 style="padding-top: 180px;text-align: center;">RSS Feed 全文输出</h1>
 	<h2>从外网feed或者网页URL,创建全文feed</h2>
     <div method="get" action="makefulltextfeed.php" id="form" class="form-horizontal">
     <div class="control-group">
