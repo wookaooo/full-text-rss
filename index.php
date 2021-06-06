@@ -86,20 +86,13 @@ if (!defined('_FF_FTR_INDEX')) {
 	<div class="container" style="width: 800px; padding-bottom: 30px;">
 	<h1 style="padding-top: 180px;text-align: center;">全文RSS获取</h1>
     <div method="get" action="makefulltextfeed.php" id="form" class="form-horizontal">
-	<div style="text-align: center; padding-bottom: 10px;>
-		<legend>从外网feed或者网页URL,创建全文feed</legend>
-		<div class="control-group">
-			<label class="control-label" for="url">Enter URL</label>
-			<div class="controls"><input type="text" id="url" name="url" style="width: 450px;" title="URL" data-content="输入feed链接或者网址，生成全文feed。" /></div>
-		</div>
+	<h2 style="text-align: center; padding-bottom: 10px;>从外网feed或者网页URL,创建全文feed</h2>
+    <div class="control-group">
+		<label class="control-label" for="url">输入feed链接或者网址</label>
 	</div>
 	    
-	<div>
 	<?php if (isset($options->api_keys) && !empty($options->api_keys)) { ?>
 	<?php } ?>
-	<div class="control-group">
-	<label class="control-label" for="max">Max items</label>
-	<div class="controls">
 	<?php
 	// echo '<select name="max" id="max" class="input-medium">'
 	// for ($i = 1; $i <= $options->max_entries; $i++) {
@@ -114,22 +107,10 @@ if (!defined('_FF_FTR_INDEX')) {
 		$msg_more = 'If you need more items, change <tt>max_entries</tt> in config.';
 	}
 	?>	
-	<input type="text" name="max" id="max" class="input-mini" value="<?php echo $options->default_entries; ?>" title="Feed item limit" data-content="Set the maximum number of feed items we should process. The smaller the number, the faster the new feed is produced.<br /><br />If your URL refers to a standard web page, this will have no effect: you will only get 1 item.<br /><br /> <?php echo $msg_more; ?>" />
 	<span class="help-inline" style="color: #888;"><?php echo $msg; ?></span>
-	</div>
-	</div>
-	
-	<?php if ($options->exclude_items_on_fail == 'user') { ?>
-	<?php } ?>
-	
-	<?php if ($options->summary == 'user') { ?>
-	
-	</div>
-	<?php } ?>
+	<?php if ($options->exclude_items_on_fail == 'user') { ?><?php } ?>
+	<?php if ($options->summary == 'user') { ?><?php } ?>
 
-
-	
-	
 	
 	</div>
 	<div class="form-actions" style="background-color: transparent; border-color: transparent; margin-top: 0px; "  >
@@ -137,14 +118,12 @@ if (!defined('_FF_FTR_INDEX')) {
 border-color: #1B9AF7; border-radius: 4px;" line-height: 50px; padding: 0 50px; font-size: 16px; />
 	</div>
 
-	</div>
-	
-	
-		<p style="font-size: 13px; color: #08c; text-decoration: none; text-align: center; margin: 0 0 9px; " >
+	<p style="font-size: 13px; color: #08c; text-decoration: none; text-align: center; margin: 0 0 9px; " >
     代码 <a href="http://fivefilters.org">fivefilters</a>
     丨托管 <a href="https://dashboard.heroku.com/">heroku</a>
     丨CDN <a href="https://dash.cloudflare.com/">cloudflare</a>
 	</p>
+
 	</div>
   </body>
 </html>
