@@ -102,7 +102,10 @@ if (!defined('_FF_FTR_INDEX')) {
 	  
 	  
 
-		
+	
+
+	<!-- 隐藏
+	  	
 		
 <div id="wp">
 <h1>
@@ -133,9 +136,6 @@ margin: 0;" >
 
 
 
-
-	<!-- 隐藏
-	  
 	<div class="container" style="width: 800px; padding-bottom: 30px;">
 	<h1 style="padding-top: 180px;text-align: center;">RSS Feed 全文输出</h1>
 	<h2>从外网feed或者网页URL,创建全文feed</h2>
@@ -151,6 +151,11 @@ border-color: #1B9AF7; border-radius: 4px;" line-height: 50px; padding: 0 50px; 
 	</div>	
 		
 
+	-->
+	
+	
+	
+	
 	<p style="font-size: 13px; color: #08c; text-decoration: none; text-align: center; margin: 0 0 9px; " >
     代码 <a href="http://fivefilters.org">fivefilters</a>
     丨托管 <a href="https://dashboard.heroku.com/">heroku</a>
@@ -159,8 +164,7 @@ border-color: #1B9AF7; border-radius: 4px;" line-height: 50px; padding: 0 50px; 
 		
 		
 	
-	
-	-->	
+		
 		
 
 	</div>
