@@ -39,7 +39,7 @@ if (!defined('_FF_FTR_INDEX')) {
 	});
 	</script>
 	<style>
-	html, body { background-color: #eee; }
+	html, body { background: linear-gradient(180deg, #edf7fe 0%, white 95%, white 100%); }
 	body { margin: 0; line-height: 1.4em; font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; }
 	label, input, select, textarea { font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; }
 	li { color: #404040; }
@@ -79,11 +79,11 @@ if (!defined('_FF_FTR_INDEX')) {
 	</style>
   </head>
   <body>
-	<div class="container" style="width: 800px; padding-bottom: 60px;">
-	<h1 style="padding-top: 12px;text-align: center;">外网&全文RSS获取</h1>
+	<div class="container" style="width: 800px; padding-bottom: 300px;">
+	<h1 style="padding-top: 12px;text-align: center;">全文RSS获取</h1>
     <form method="get" action="makefulltextfeed.php" id="form" class="form-horizontal">
 	<fieldset>
-		<legend>从feed或者网页URL,创建全文feed</legend>
+		<legend>从外网feed或者网页URL,创建全文feed</legend>
 		<div class="control-group">
 			<label class="control-label" for="url">Enter URL</label>
 			<div class="controls"><input type="text" id="url" name="url" style="width: 450px;" title="URL" data-content="输入feed链接或者网址，生成全文feed。" /></div>
@@ -120,11 +120,7 @@ if (!defined('_FF_FTR_INDEX')) {
 	<?php } ?>
 	
 	<?php if ($options->summary == 'user') { ?>
-	<div class="control-group">
-	<label class="control-label" for="summary">Include excerpt</label>
-	<div class="controls">
-	<input type="checkbox" name="summary" value="1" id="summary" style="margin-top: 7px;" />
-	</div>
+	
 	</div>
 	<?php } ?>
 
@@ -133,8 +129,9 @@ if (!defined('_FF_FTR_INDEX')) {
 	
 	
 	</fieldset>
-	<div class="form-actions">
-		<input type="submit" id="sudbmit" name="submit" value="Create Feed" class="btn btn-primary" />
+	<div class="form-actions" style="background-color: transparent; border-color: transparent; margin-top: 0px; "  >
+		<input type="submit" id="sudbmit" name="submit" value="Create Feed" class="btn btn-primary" style="background-color: #1B9AF7;
+border-color: #1B9AF7; border-radius: 4px;" line-height: 50px; padding: 0 50px; font-size: 16px; />
 	</div>
 	</form>
 	
