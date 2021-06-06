@@ -85,7 +85,7 @@ if (!defined('_FF_FTR_INDEX')) {
   <body>
 	  
 	  <div class="container" style="width: 800px; padding-bottom: 60px;">
-	<h1 style="style="padding-top: 180px;text-align: center;">RSS Feed 全文输出 </h1>
+	<h1 style="padding-top: 180px;text-align: center;">RSS Feed 全文输出 </h1>
     <form method="get" action="makefulltextfeed.php" id="form" class="form-horizontal">
 	<fieldset>
 		<legend>Create full-text feed from feed or webpage URL</legend>
